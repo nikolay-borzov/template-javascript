@@ -1,0 +1,89 @@
+{
+  "name": "template-javascript",
+  "version": "1.0.0",
+  "description": "Template for JavaScript project",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "template-repository"
+  ],
+  "author": "Nikolay Borzov <nikolay.n.borzov@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolay-borzov/template-javascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikolay-borzov/template-javascript/issues"
+  },
+  "homepage": "https://github.com/nikolay-borzov/template-javascript#readme",
+  "scripts": {
+    "test": "ava",
+    "test:coverage": "c8 --include src/** --all --reporter text --reporter lcov ava",
+    "test:coverage:view": "npx open-cli coverage\\lcov-report\\index.html",
+    "lint-staged": "lint-staged"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": false
+  },
+  "ava": {
+    "files": [
+      "tests/*.test.js"
+    ],
+    "verbose": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-case": [
+        2,
+        "always",
+        "sentence-case"
+      ],
+      "subject-case": [
+        2,
+        "always",
+        "sentence-case"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "ava": "^3.15.0",
+    "c8": "^7.5.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier-standard": "^4.0.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-ava": "^11.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^31.6.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "open-cli": "^6.0.1",
+    "prettier": "2.2.1",
+    "prettier-config-standard": "^4.0.0"
+  }
+}
