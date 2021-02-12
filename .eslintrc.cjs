@@ -31,6 +31,8 @@ module.exports = {
       /* Empty line after const, let */
       { blankLine: 'always', prev: ['const', 'let'], next: '*' },
       { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
+      /* Empty line between case and default inside switch */
+      { blankLine: 'always', prev: 'case', next: ['case', 'default'] },
     ],
 
     /* eslint-plugin-import */
