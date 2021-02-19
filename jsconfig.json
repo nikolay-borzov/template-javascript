@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "checkJs": true,
-    "strict": true
+    "strict": true,
+    "target": "esnext"
   },
   "include": ["src", "tests"]
 }

@@ -5,7 +5,7 @@
  * @returns {number}
  */
 export function normalizeNumberResult(possibleNumber) {
-  if (isNaN(possibleNumber)) {
+  if (typeof possibleNumber !== 'number' || Number.isNaN(possibleNumber)) {
     return 0
   }
 

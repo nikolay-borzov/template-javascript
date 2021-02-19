@@ -1,8 +1,8 @@
 # JavaScript template
+
 [![NPM version][npm-image]][npm-url]
 [![Style Guide][style-guide-image]][style-guide-url]
 [![Inline docs][docs-image]][docs-url]
-
 
 [npm-image]: https://img.shields.io/npm/v/@nikolay-borzov/template-javascript.svg
 [npm-url]: https://npmjs.org/package/@nikolay-borzov/template-javascript
@@ -40,11 +40,15 @@ Collect coverage with [c8](https://github.com/bcoe/c8). [nyc](https://github.com
 
 # `pre-commit` hook
 
-- Lint staged code and run tests (with [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky))
+Using [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky):
+
+- Lint staged code and run tests
+- Format all supported files with [prettier](https://prettier.io/4)
 
 # `commit-msg` hook
 
 - Lint commit message to be [conventional](https://www.conventionalcommits.org/en/v1.0.0/)
+
 # Configs
 
 Try to keep configs (that uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig)) inside `package.json` to reduce amount of files in the root.

@@ -8,6 +8,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:jsdoc/recommended',
+    'plugin:unicorn/recommended',
     'prettier-standard/prettier-file',
   ],
   parserOptions: {
@@ -35,9 +36,13 @@ module.exports = {
       { blankLine: 'always', prev: 'case', next: ['case', 'default'] },
     ],
 
+    /* eslint-plugin-prettier */
+
+    'prettier/prettier': 'warn',
+
     /* eslint-plugin-import */
 
-    // Require extension for imports. This is needed for AVA because it fails to import module w/o extensions
+    // Require extension for imports. This is needed for Node.js because it fails to import module w/o extensions
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     // Force using only named exports
     'import/no-default-export': 'error',
