@@ -36,17 +36,6 @@ module.exports = {
       { blankLine: 'always', prev: 'case', next: ['case', 'default'] },
     ],
 
-    /* eslint-plugin-prettier */
-
-    'prettier/prettier': 'warn',
-
-    /* eslint-plugin-import */
-
-    // Require extension for imports. This is needed for Node.js because it fails to import module w/o extensions
-    'import/extensions': ['error', 'always', { ignorePackages: true }],
-    // Force using only named exports
-    'import/no-default-export': 'error',
-
     /* eslint-plugin-jsdoc */
 
     // Descriptions should be sentence-like not comment-like
@@ -62,6 +51,22 @@ module.exports = {
     'jsdoc/require-property-description': 'off',
     'jsdoc/require-returns-description': 'off',
     'jsdoc/require-returns': 'off',
+
+    /* eslint-plugin-unicorn */
+
+    // I like reduce
+    'unicorn/no-array-reduce': 'off',
+
+    /* eslint-plugin-import */
+
+    // Require extension for imports. This is needed for Node.js because it fails to import module w/o extensions
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    // Force using only named exports
+    'import/no-default-export': 'error',
+
+    /* eslint-plugin-prettier */
+
+    'prettier/prettier': 'warn',
   },
   overrides: [
     {

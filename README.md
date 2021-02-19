@@ -27,6 +27,7 @@ Lint with [ESLint](https://eslint.org). Format with [Prettier](https://prettier.
 
 - [`eslint:recommended`](https://eslint.org/docs/rules/)
 - [`plugin:jsdoc/recommended`](https://github.com/gajus/eslint-plugin-jsdoc)
+- [`plugin:unicorn/recommended`](https://github.com/sindresorhus/eslint-plugin-unicorn)
 - [`prettier-standard/prettier-file`](https://github.com/npetruzzelli/eslint-config-prettier-standard)
 - Some sensible overrides (See [`.eslintrc.cjs`](.eslintrc.cjs))
 
