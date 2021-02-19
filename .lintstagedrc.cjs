@@ -3,5 +3,5 @@ module.exports = {
     `eslint --cache --fix ${filenames.join(' ')}`,
     'ava',
   ],
-  '**/*.*': 'prettier --write',
+  '**/*.*': 'prettier --write --ignore-unknown',
 }
