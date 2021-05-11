@@ -9,7 +9,7 @@ test('complexCalculations » should add two numbers', (t) => {
   t.is(actual, expected)
 })
 
-test('complexCalculations » should return 0 result is not a number', (t) => {
+test('complexCalculations » should return 0 if result is not a number', (t) => {
   const expected = 0
 
   const actual = complexCalculations(3, '😫')

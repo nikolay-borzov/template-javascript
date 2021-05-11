@@ -59,7 +59,7 @@ module.exports = {
 
     /* eslint-plugin-import */
 
-    // Require extension for imports. This is needed for Node.js because it fails to import module w/o extensions
+    // Require extension for imports. This is needed for Node.js because it fails to import ECMAScript module w/o extension
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     // Force using only named exports
     'import/no-default-export': 'error',
@@ -68,11 +68,21 @@ module.exports = {
 
     'prettier/prettier': 'warn',
   },
+
   overrides: [
+    // Test files
     {
       files: 'tests/**/*',
-      plugins: ['ava'],
       extends: ['plugin:ava/recommended'],
+    },
+    // Config CommonJS files
+    {
+      files: '*.cjs',
+      rules: {
+        /* eslint-plugin-unicorn */
+
+        'unicorn/prefer-module': 'off',
+      },
     },
   ],
 }
