@@ -17,7 +17,7 @@ module.exports = {
   },
   settings: {
     jsdoc: {
-      mode: 'typescript',
+      mode: 'jsdoc',
     },
   },
   // Keep rules grouped by plugin and sorted alphabetically
@@ -68,7 +68,6 @@ module.exports = {
 
     'prettier/prettier': 'warn',
   },
-
   overrides: [
     // Test files
     {

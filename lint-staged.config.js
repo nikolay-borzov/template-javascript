@@ -1,4 +1,5 @@
-module.exports = {
+// eslint-disable-next-line import/no-default-export -- It's okay for a config
+export default {
   '**/*.?(c)js': (filenames) => [
     `eslint --cache --fix ${filenames.join(' ')}`,
     'ava --fail-fast',

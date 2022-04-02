@@ -1,1 +1,1 @@
-export * from './calc'
+export * from './calc.js'
