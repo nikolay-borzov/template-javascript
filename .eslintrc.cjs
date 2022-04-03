@@ -22,6 +22,8 @@ module.exports = {
   },
   // Keep rules grouped by plugin and sorted alphabetically
   rules: {
+    'object-shorthand': ['error', 'always'],
+
     'padding-line-between-statements': [
       'error',
       /* Empty line after import */
@@ -63,6 +65,25 @@ module.exports = {
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     // Force using only named exports
     'import/no-default-export': 'error',
+    // Sort imports
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'type',
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: false,
+        },
+      },
+    ],
 
     /* eslint-plugin-prettier */
 

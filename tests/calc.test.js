@@ -1,4 +1,5 @@
 import test from 'ava'
+
 import { complexCalculations } from '../src/calc.js'
 
 test('complexCalculations » should add two numbers', (t) => {
