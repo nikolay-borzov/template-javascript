@@ -1,6 +1,13 @@
 module.exports = {
   root: true,
-  ignorePatterns: ['**/*.*', '!**/*.js', '!**/*.cjs', 'node_modules', '/dist'],
+  ignorePatterns: [
+    '**/*.*',
+    '!**/*.js',
+    '!**/*.cjs',
+    'node_modules',
+    '/dist',
+    'coverage',
+  ],
   env: {
     browser: true,
     es2021: true,
