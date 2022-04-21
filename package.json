@@ -2,19 +2,6 @@
   "name": "template-javascript",
   "version": "1.0.0",
   "description": "Template for JavaScript project",
-  "type": "module",
-  "main": "./src/index.js",
-  "exports": "./src/index.js",
-  "engines": {
-    "node": ">=16"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "template-repository"
-  ],
-  "author": "Nikolay Borzov <nikolay.n.borzov@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,6 +11,21 @@
     "url": "https://github.com/nikolay-borzov/template-javascript/issues"
   },
   "homepage": "https://github.com/nikolay-borzov/template-javascript#readme",
+  "keywords": [
+    "template-repository"
+  ],
+  "author": {
+    "name": "Nikolay Borzov",
+    "email": "nikolay.n.borzov@gmail.com"
+  },
+  "type": "module",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": "^14.13.1 || >=16.0.0"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "ava",
     "test:watch": "ava --watch",
@@ -74,7 +76,7 @@
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.2.5",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-unicorn": "^42.0.0",
