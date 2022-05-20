@@ -1,32 +1,38 @@
 module.exports = {
   root: true,
+
   ignorePatterns: [
     '**/*.*',
     '!**/*.js',
     '!**/*.cjs',
-    'node_modules',
-    '/dist',
     'coverage',
+    'node_modules',
+    'dist',
   ],
+
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+
   env: {
     browser: true,
     es2021: true,
   },
+
   extends: [
     'eslint:recommended',
     'plugin:jsdoc/recommended',
     'plugin:unicorn/recommended',
     'prettier-standard/prettier-file',
   ],
-  parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
+
   settings: {
     jsdoc: {
       mode: 'jsdoc',
     },
   },
+
   // Keep rules grouped by plugin and sorted alphabetically
   rules: {
     'object-shorthand': ['error', 'always'],
@@ -68,9 +74,9 @@ module.exports = {
 
     /* eslint-plugin-import */
 
-    // Require extension for imports. This is needed for Node.js because it fails to import ECMAScript module w/o extension
+    // Require extension for imports. Required by Node.js with `type: "module"`
     'import/extensions': ['error', 'always', { ignorePackages: true }],
-    // Force using only named exports
+    // Force using only named exports. Default export allowed for a module main export
     'import/no-default-export': 'error',
     // Sort imports
     'import/order': [
@@ -96,6 +102,7 @@ module.exports = {
 
     'prettier/prettier': 'warn',
   },
+
   overrides: [
     // Test files
     {

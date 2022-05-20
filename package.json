@@ -21,7 +21,7 @@
   "type": "module",
   "exports": "./src/index.js",
   "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+    "node": ">=14.16"
   },
   "files": [
     "dist"
@@ -30,7 +30,7 @@
     "test": "ava",
     "test:watch": "ava --watch",
     "test:update-snapshots": "ava --update-snapshots",
-    "test:coverage:collect": "c8 --include src/** --all --reporter=text --reporter=lcov ava",
+    "test:coverage:collect": "c8 ava",
     "test:coverage:view": "npx open-cli coverage\\lcov-report\\index.html",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
@@ -46,6 +46,11 @@
       "tests/*.test.js"
     ],
     "verbose": true
+  },
+  "c8": {
+    "all": true,
+    "include": ["src/**"],
+    "reporter": ["text", "lcov"]
   },
   "commitlint": {
     "extends": [
@@ -65,23 +70,23 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
     "ava": "^4.2.0",
-    "c8": "^7.11.2",
-    "eslint": "^8.13.0",
+    "c8": "^7.11.3",
+    "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-prettier-standard": "^4.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.2.5",
-    "eslint-plugin-n": "^15.1.0",
+    "eslint-plugin-jsdoc": "^39.3.0",
+    "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-unicorn": "^42.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.4.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "open-cli": "^7.0.1",
     "prettier": "2.6.2",
     "prettier-config-standard": "^5.0.0"
