@@ -15,7 +15,7 @@ A template for JavaScript project with essential (IMHO) configuration and depend
 
 # Node.js
 
-- Require version >= 16
+- Require version >= 18
 - [`type: module`](https://nodejs.org/api/esm.html)
 - [`exports`](https://nodejs.org/docs/latest-v12.x/api/packages.html#packages_main_entry_point_export) in addition to `main` field
 
