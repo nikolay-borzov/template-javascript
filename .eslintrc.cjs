@@ -35,13 +35,10 @@ module.exports = {
 
   // Keep rules grouped by plugin and sorted alphabetically
   rules: {
-    'object-shorthand': ['error', 'always'],
-
     'padding-line-between-statements': [
       'error',
-      /* Empty line after import */
-      { blankLine: 'always', prev: 'import', next: '*' },
-      { blankLine: 'any', prev: 'import', next: 'import' },
+      /* Empty line before if statement */
+      { blankLine: 'always', prev: '*', next: 'if' },
       /* Empty line before return */
       { blankLine: 'always', prev: '*', next: 'return' },
       /* Empty line after const, let */
@@ -49,6 +46,14 @@ module.exports = {
       { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
       /* Empty line between case and default inside switch */
       { blankLine: 'always', prev: 'case', next: ['case', 'default'] },
+    ],
+
+    // Sort import members
+    'sort-imports': [
+      'error',
+      {
+        ignoreDeclarationSort: true,
+      },
     ],
 
     /* eslint-plugin-jsdoc */
@@ -78,6 +83,7 @@ module.exports = {
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     // Force using only named exports. Default export allowed for a module main export
     'import/no-default-export': 'error',
+    'import/newline-after-import': 'error',
     // Sort imports
     'import/order': [
       'error',
