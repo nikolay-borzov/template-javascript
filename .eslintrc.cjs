@@ -22,14 +22,14 @@ module.exports = {
 
   extends: [
     'eslint:recommended',
-    'plugin:jsdoc/recommended',
+    'plugin:jsdoc/recommended-typescript-flavor',
     'plugin:unicorn/recommended',
     'prettier-standard/prettier-file',
   ],
 
   settings: {
     jsdoc: {
-      mode: 'jsdoc',
+      mode: 'typescript',
     },
   },
 
@@ -64,6 +64,15 @@ module.exports = {
       'error',
       'never',
       { tags: { property: 'never' } },
+    ],
+    // Empty line after description
+    'jsdoc/tag-lines': [
+      'error',
+      'never',
+      {
+        startLines: 1,
+        tags: { description: { lines: 'always', count: 1 } },
+      },
     ],
     // Adding JSDoc is preferable but not required
     'jsdoc/require-jsdoc': 'off',
@@ -115,13 +124,21 @@ module.exports = {
       files: 'tests/**/*',
       extends: ['plugin:ava/recommended'],
     },
-    // Config CommonJS files
+    // Config CommonJS
     {
       files: '*.cjs',
       rules: {
         /* eslint-plugin-unicorn */
 
         'unicorn/prefer-module': 'off',
+      },
+    },
+    // Config ES module
+    {
+      files: '*.config.js',
+      rules: {
+        // Acceptable export type is not controlled for config files
+        'import/no-default-export': 'off',
       },
     },
   ],

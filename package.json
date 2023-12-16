@@ -21,7 +21,7 @@
   "type": "module",
   "exports": "./src/index.js",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "files": [
     "dist"
@@ -35,60 +35,26 @@
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
-  "prettier": {
-    "printWidth": 80,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "semi": false
-  },
-  "ava": {
-    "files": [
-      "tests/*.test.js"
-    ],
-    "verbose": true
-  },
-  "c8": {
-    "all": true,
-    "include": ["src/**"],
-    "reporter": ["text", "lcov"]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "body-case": [
-        2,
-        "always",
-        "sentence-case"
-      ],
-      "subject-case": [
-        2,
-        "always",
-        "sentence-case"
-      ]
-    }
-  },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "ava": "^5.2.0",
-    "c8": "^7.13.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "ava": "^6.0.1",
+    "c8": "^8.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-config-prettier-standard": "^4.0.1",
-    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard": "^17.1.0",
     "eslint-plugin-ava": "^14.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^40.0.0",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^46.9.1",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unicorn": "^45.0.2",
+    "eslint-plugin-unicorn": "^49.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
-    "open-cli": "^7.1.0",
-    "prettier": "2.8.4",
-    "prettier-config-standard": "^5.0.0"
+    "lint-staged": "^15.2.0",
+    "open-cli": "^7.2.0",
+    "prettier": "3.1.1",
+    "prettier-config-standard": "^7.0.0"
   }
 }

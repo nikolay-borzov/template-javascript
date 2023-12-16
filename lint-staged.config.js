@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-default-export -- It's okay for a config
+// TODO: Specify config type https://github.com/lint-staged/lint-staged/issues/1359
 export default {
   '*.{js,cjs}': (filenames) => [
     `eslint --cache --fix ${filenames.join(' ')}`,

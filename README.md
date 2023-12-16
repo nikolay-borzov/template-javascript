@@ -1,5 +1,7 @@
 # JavaScript template
 
+[![ru](https://img.shields.io/badge/lang-ru-%23d52b1e)](./README.ru.md)
+
 [![NPM version][npm-image]][npm-url]
 [![Style Guide][style-guide-image]][style-guide-url]
 [![Inline docs][docs-image]][docs-url]
@@ -15,13 +17,13 @@ A template for JavaScript project with essential (IMHO) configuration and depend
 
 # Node.js
 
-- Require version >= 18
+- Require version >= 20
 - [`type: module`](https://nodejs.org/api/esm.html)
 - [`exports`](https://nodejs.org/docs/latest-v12.x/api/packages.html#packages_main_entry_point_export) in addition to `main` field
 
-# Linting
+# Linting and formatting
 
-Lint with [ESLint](https://eslint.org). Format with [Prettier](https://prettier.io/) (as part of ESLint linting process)
+Lint with [ESLint](https://eslint.org). Format with [Prettier](https://prettier.io/) (as part of ESLint linting process).
 
 ## Rules set
 
@@ -44,19 +46,20 @@ Collect coverage with [c8](https://github.com/bcoe/c8). [nyc](https://github.com
 Using [lint-staged](https://github.com/okonet/lint-staged) and [husky](https://github.com/typicode/husky):
 
 - Lint staged code and run tests
+- Lint all files when ESLint config is changed
 - Format all supported files with [prettier](https://prettier.io/4)
 
 # `commit-msg` hook
 
-- Lint commit message to be [conventional](https://www.conventionalcommits.org/en/v1.0.0/)
+Lint commit message to be [conventional](https://www.conventionalcommits.org/en/v1.0.0/)
 
 # Configs
 
-Try to keep configs (that uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig)) inside `package.json` to reduce amount of files in the root.
+Keep config files in the root.
 
 # `jsconfig.json`
 
 - Define JavaScript project
 - Include only `src` and `tests` directories
-- Enable type checking on JavaScript files.
-- Enable all strict type checking options.
+- Enable type checking on JavaScript files
+- Enable all strict type checking options
