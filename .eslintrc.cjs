@@ -27,6 +27,8 @@ module.exports = {
     'prettier-standard/prettier-file',
   ],
 
+  plugins: ['@stylistic'],
+
   settings: {
     jsdoc: {
       mode: 'typescript',
@@ -35,7 +37,17 @@ module.exports = {
 
   // Keep rules grouped by plugin and sorted alphabetically
   rules: {
-    'padding-line-between-statements': [
+    // Sort import members
+    'sort-imports': [
+      'error',
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
+
+    /* @stylistic/eslint-plugin */
+
+    '@stylistic/padding-line-between-statements': [
       'error',
       /* Empty line before if statement */
       { blankLine: 'always', prev: '*', next: 'if' },
@@ -46,14 +58,6 @@ module.exports = {
       { blankLine: 'any', prev: ['const', 'let'], next: ['const', 'let'] },
       /* Empty line between case and default inside switch */
       { blankLine: 'always', prev: 'case', next: ['case', 'default'] },
-    ],
-
-    // Sort import members
-    'sort-imports': [
-      'error',
-      {
-        ignoreDeclarationSort: true,
-      },
     ],
 
     /* eslint-plugin-jsdoc */
