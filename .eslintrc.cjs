@@ -24,10 +24,11 @@ module.exports = {
     'eslint:recommended',
     'plugin:jsdoc/recommended-typescript-flavor',
     'plugin:unicorn/recommended',
+    'plugin:@stylistic/disable-legacy',
     'prettier-standard/prettier-file',
   ],
 
-  plugins: ['@stylistic'],
+  plugins: ['@stylistic', '@stylistic/migrate'],
 
   settings: {
     jsdoc: {
@@ -46,6 +47,8 @@ module.exports = {
     ],
 
     /* @stylistic/eslint-plugin */
+
+    '@stylistic/migrate/migrate-js': 'error',
 
     '@stylistic/padding-line-between-statements': [
       'error',

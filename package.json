@@ -39,6 +39,7 @@
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@stylistic/eslint-plugin": "^1.5.1",
+    "@stylistic/eslint-plugin-migrate": "^1.5.1",
     "ava": "^6.0.1",
     "c8": "^8.0.1",
     "eslint": "^8.56.0",
